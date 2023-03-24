@@ -1,22 +1,25 @@
 public class Rectangle
 {
-	double length=12.45;
-	double breadth=13;
+	double length;
+	double breadth;
 	void setdata()
 	{
+	length=12.45;
+	breadth=13;
 	System.out.println("Length= "+length);
 	System.out.println("Breadth= "+breadth);
 	}
-	void setarea()
+	void getarea()
 	{
 	double area;
 	area=length*breadth;
-	System.out.println("Area= "+area);
+	return area;
 	}
 	public static void main(String args[])
 	{
 	Rectangle a=new Rectangle();
 	a.setdata();
-	a.setarea();	
+	a.getarea();
+	System.out.println("Area= "+a.getarea());
 	}
 }	
