@@ -17,7 +17,7 @@ System.out.println("not symmetric");
 else
 {
 int a[][]=new int[r][c];
-System.out.println("enetr the elemnts of matrix:");
+System.out.println("enter the elemnts of matrix:");
 for(i=0;i<r;i++)
 {
 for(j=0;j<c;j++)
