@@ -1,12 +1,22 @@
-import java.util.Arrays;
 import java.util.Scanner;
-public class SortingString {
-   public static void main(String args[]) {
-      Scanner sc = new Scanner(System.in);
-      System.out.println("Enter a string value: ");
-      String str = sc.nextLine();
-      char charArray[] = str.toCharArray();
-      Arrays.sort(charArray);
-      System.out.println(new String(charArray));
-   }
+import java.util.Arrays;
+class Sort
+{
+public static void main(String[] args)
+{
+Scanner input=new Scanner(System.in);
+System.out.print("Enter number of strings:");
+int numStrings=input.nextInt();
+String[] arr=new String[numStrings];
+for(int i=0;i<numStrings;i++)
+{
+System.out.print("Enter a string:");
+arr[i]=input.next();
+}
+Arrays.sort(arr);
+System.out.println("Sorted strings:");
+for (String s: arr){
+System.out.println(s);
+}
+}
 }
