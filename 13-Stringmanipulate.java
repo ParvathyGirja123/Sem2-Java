@@ -52,10 +52,10 @@ public class Stringmanipulate {
         StringBuffer stringBuffer = new StringBuffer(str);
         
        
-        System.out.print("Enter a string to concatenate: ");
+        System.out.print("Enter a string to append: ");
         String strToConcat2 = scanner.nextLine();
         stringBuffer.append(strToConcat2);
-        System.out.println("Concatenated string: " + stringBuffer.toString());
+        System.out.println("Appented string: " + stringBuffer.toString());
         
         
         int stringBufferLength = stringBuffer.length();
