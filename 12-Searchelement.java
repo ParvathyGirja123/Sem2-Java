@@ -12,7 +12,7 @@ class arr2
 		int[] a = new int[n];
  
     		System.out.println("Enter the elements") ;
-    		for(i=1;i<n;i++)
+    		for(i=0;i<n;i++)
     		{
         		a[i] = sc.nextInt();
     		}
@@ -21,7 +21,7 @@ class arr2
 		search = sc.nextInt();
     
     		/*Perform search operation*/
-    		for(i=1;i<n;i++)
+    		for(i=0;i<n;i++)
     		{
         		if(a[i]==search)
         		{
