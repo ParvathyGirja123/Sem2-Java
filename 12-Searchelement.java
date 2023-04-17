@@ -1,20 +1,38 @@
-public class SearchElement
-  {    
-    public static int linearSearch(int[] arr, int key)
-      {    
-        for(int i=0;i<arr.length;i++)
-          {    
-            if(arr[i] == key)
-              {    
-                return i;    
-              }    
-          }    
-        return -1;    
-       }    
-    public static void main(String args[])
-      {    
-        int[] a1= {10,20,30,50,70,90};    
-        int key = 50;    
-        System.out.println(key+" is found at index: "+linearSearch(a1,key));    
-      }    
-  }   
+import java.util.*;
+
+class arr2
+{  
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		
+    		int i,n,search,flag=0;
+		System.out.println("Enter the number of elements:") ;
+ 		n = sc.nextInt();
+		int[] a = new int[n];
+ 
+    		System.out.println("Enter the elements") ;
+    		for(i=1;i<n;i++)
+    		{
+        		a[i] = sc.nextInt();
+    		}
+		
+		System.out.println("Enter the element to be seached");
+		search = sc.nextInt();
+    
+    		/*Perform search operation*/
+    		for(i=1;i<n;i++)
+    		{
+        		if(a[i]==search)
+        		{
+            			System.out.println("Element "+search+" found at "+i+" position");
+            			flag=1;
+            			break;
+        		}
+    		}
+    		if(flag==0)
+    		{
+        		System.out.println("Element "+search+" not found");
+    		}
+	}
+}
