@@ -1,49 +1,52 @@
-// Parent class - Student
-class Student {
-    protected int academicScore;
+import java.util.Scanner;
 
-    public Student(int academicScore) {
-        this.academicScore = academicScore;
+// Create classes Student and Sports. Create another class Result inherited from Student and 
+// Sports. Display the academic and sports score of a student
+class sports{
+    String sport;
+    int Rating;
+    sports(String spo, int ra){
+        sport = spo;
+        Rating = ra;
     }
 
-    public int getAcademicScore() {
-        return academicScore;
+}
+class student extends sports{
+    String Grade;
+    double Overall_per;
+    student(String spo, int ra,String gd, double per ){
+        super(spo, ra);
+        Grade = gd;
+        Overall_per = per;
     }
 }
-
-// Parent class - Sports
-class Sports {
-    protected int sportsScore;
-
-    public Sports(int sportsScore) {
-        this.sportsScore = sportsScore;
+public class result extends student {
+    result(String spo, int ra,String gd, double per ){
+        super(spo, ra, gd, per);
+    }
+    void display(){
+        System.out.println("\nSports Details of Student");
+        System.out.println("Sport :"+sport);
+        System.out.println("Rating :"+Rating);
+        System.out.println("\nAcademic Details of Student");
+        System.out.println("Academic Grade :"+Grade);
+        System.out.println("Overall percentage :"+Overall_per);
     }
 
-    public int getSportsScore() {
-        return sportsScore;
-    }
-}
-
-// Child class - Result
-class Result extends Student, Sports {
-    public Result(int academicScore, int sportsScore) {
-        super(academicScore);
-        this.sportsScore = sportsScore;
-    }
-
-    public void displayScores() {
-        System.out.println("Academic Score: " + getAcademicScore());
-        System.out.println("Sports Score: " + getSportsScore());
-    }
-}
-
-// Main class
-public class Main {
     public static void main(String[] args) {
-        // Create an instance of Result
-        Result result = new Result(90, 85);
-
-        // Display the scores
-        result.displayScores();
+        Scanner sc =new Scanner(System.in);
+        System.out.println("\nEnter the Sports Details of Student");
+        System.out.println("\n Sport: ");
+        String a =sc.next();
+        System.out.println("\n Sport Rating  out of 10: ");
+        int b =sc.nextInt();
+        System.out.println("\nEnter the Sports Details of Student");
+        System.out.println("\n Academic Grade: ");
+        String c =sc.next();
+        System.out.println("\n Overall percentage: ");
+        double d =sc.nextDouble();
+        sc.close();
+        result obj= new result(a,b,c,d);
+        obj.display();
     }
 }
