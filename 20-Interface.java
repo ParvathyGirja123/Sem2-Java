@@ -1,52 +1,56 @@
-import java.util.Scanner;
+import java.util.*;
+interface Student
+{
+	void read1(String sname,float s,String admsn);
+} 
+interface Sports
+{
+	void read2(float p);
+} 
+class Result implements Student, Sports
+{
+	public String name,admsn;
+	public float total;
+	public float point;
+	public void read1(String sname,float s,String regno)
+	{
+		name=sname;
+		total=s;
+		admsn=regno;
+	}
+	public void read2(float pt)
+	{
+	 	point=pt;
+	}
+	public void display()
+	{
+		System.out.println("Register number: "+admsn);
+		System.out.println("Name: " +name);
+		System.out.println("Academic CGPA: "+total);
+		System.out.println("Score obtained in sports: "+point);
+	}
 
-// Create classes Student and Sports. Create another class Result inherited from Student and 
-// Sports. Display the academic and sports score of a student
-class sports{
-    String sport;
-    int Rating;
-    sports(String spo, int ra){
-        sport = spo;
-        Rating = ra;
-    }
+} 
+class interfaceSS
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		Scanner s=new Scanner(System.in);
+		float pt,total;
+		System.out.print("Enter the admission number: ");
+		String admsn=sc.nextLine();
+		System.out.print("Name of the student: ");
+		String name=sc.nextLine();
+		System.out.println("Enter the academic and sports details of a student: ");
+		System.out.print("Enter the total CGPA obtained: ");
+		total=s.nextFloat();
+		System.out.print("Enter the overall score point obtained in sports(out of 10): ");
+		pt=s.nextFloat();
 
-}
-class student extends sports{
-    String Grade;
-    double Overall_per;
-    student(String spo, int ra,String gd, double per ){
-        super(spo, ra);
-        Grade = gd;
-        Overall_per = per;
-    }
-}
-public class result extends student {
-    result(String spo, int ra,String gd, double per ){
-        super(spo, ra, gd, per);
-    }
-    void display(){
-        System.out.println("\nSports Details of Student");
-        System.out.println("Sport :"+sport);
-        System.out.println("Rating :"+Rating);
-        System.out.println("\nAcademic Details of Student");
-        System.out.println("Academic Grade :"+Grade);
-        System.out.println("Overall percentage :"+Overall_per);
-    }
-
-    public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("\nEnter the Sports Details of Student");
-        System.out.println("\n Sport: ");
-        String a =sc.next();
-        System.out.println("\n Sport Rating  out of 10: ");
-        int b =sc.nextInt();
-        System.out.println("\nEnter the Sports Details of Student");
-        System.out.println("\n Academic Grade: ");
-        String c =sc.next();
-        System.out.println("\n Overall percentage: ");
-        double d =sc.nextDouble();
-        sc.close();
-        result obj= new result(a,b,c,d);
-        obj.display();
-    }
+		Result o =new Result();
+		o.read1(name,total,admsn);
+		o.read2(pt);
+		o.display();
+	}
 }
