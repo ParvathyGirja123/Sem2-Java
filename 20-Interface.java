@@ -26,12 +26,12 @@ class Result implements Student, Sports
 	{
 		System.out.println("Register number: "+admsn);
 		System.out.println("Name: " +name);
-		System.out.println("Academic CGPA: "+total);
-		System.out.println("Score obtained in sports: "+point);
+		System.out.println("CGPA Obtained: "+total);
+		System.out.println("Score in sports: "+point);
 	}
 
 } 
-class interfaceSS
+class interfaces
 {
 	public static void main(String args[])
 	{
