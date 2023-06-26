@@ -24,6 +24,7 @@ class Result implements Student, Sports
 	}
 	public void display()
 	{
+		System.out.println("\nDETAILS OBTAINED :\n");
 		System.out.println("Register number: "+admsn);
 		System.out.println("Name: " +name);
 		System.out.println("CGPA Obtained: "+total);
@@ -38,14 +39,13 @@ class interfaces
 		Scanner sc=new Scanner(System.in);
 		Scanner s=new Scanner(System.in);
 		float pt,total;
-		System.out.print("Enter the admission number: ");
+		System.out.print("Admission number: ");
 		String admsn=sc.nextLine();
-		System.out.print("Name of the student: ");
+		System.out.print("Name: ");
 		String name=sc.nextLine();
-		System.out.println("Enter the academic and sports details of a student: ");
-		System.out.print("Enter the total CGPA obtained: ");
+		System.out.print("CGPA obtained: ");
 		total=s.nextFloat();
-		System.out.print("Enter the overall score point obtained in sports(out of 10): ");
+		System.out.print("Score in sports: ");
 		pt=s.nextFloat();
 
 		Result o =new Result();
