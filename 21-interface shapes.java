@@ -1,12 +1,8 @@
 import java.util.Scanner;
-
-// Interface with area() and perimeter() prototypes
 interface Shape {
     double area();
     double perimeter();
 }
-
-// Circle class implementing the Shape interface
 class Circle implements Shape {
     private double radius;
 
@@ -24,8 +20,6 @@ class Circle implements Shape {
         return 2 * Math.PI * radius;
     }
 }
-
-// Rectangle class implementing the Shape interface
 class Rectangle implements Shape {
     private double length;
     private double width;
@@ -45,8 +39,6 @@ class Rectangle implements Shape {
         return 2 * (length + width);
     }
 }
-
-// Menu-driven program
 public class ShapeCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
