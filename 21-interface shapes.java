@@ -72,7 +72,7 @@ public class ShapeCalculator {
                     break;
                 
                 case 3:
-                    System.out.println("Exiting...");
+                    System.out.println("Exited");
                     break;
                 
                 default:
