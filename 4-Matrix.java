@@ -1,18 +1,38 @@
-public class Matrix
-{  
-public static void main(String args[])
-{     
- int a[][]={{1,3,4},{2,4,3},{3,4,5}};    
- int b[][]={{1,3,4},{2,4,3},{1,2,4}};
- int c[][]=new int[3][3];    
- for(int i=0;i<3;i++)
- {    
-  for(int j=0;j<3;j++)
-  {    
-    c[i][j]=a[i][j]+b[i][j];    
-    System.out.print(c[i][j]+" ");    
-  }    
-    System.out.println();   
- }    
+import java.util.*;
+public class matrix{
+public static void main(String args[]){
+int row,col,i,j;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the number of rows:");
+row=sc.nextInt();
+System.out.println("Enter the number of column:");
+col=sc.nextInt();
+int a[][]=new int[row][col];
+int b[][]=new int[row][col];
+int res[][]=new int[row][col];
+System.out.println("Enter the numbers of matrix1:");
+for(i=0;i<row;i++){
+for(j=0;j<col;j++){
+a[i][j]=sc.nextInt();
 }
-}  
+}
+System.out.println("Enter the numbers of matrix2:");
+for(i=0;i<row;i++){
+for(j=0;j<col;j++){
+b[i][j]=sc.nextInt();
+}
+}
+System.out.println("Sum of matrixes:");
+for(i=0;i<row;i++){
+for(j=0;j<col;j++){
+res[i][j]=a[i][j]+b[i][j];
+}
+}
+for(i=0;i<row;i++){
+for(j=0;j<col;j++){
+System.out.print(res[i][j]+"\t");
+}
+System.out.println();
+}
+}
+}
